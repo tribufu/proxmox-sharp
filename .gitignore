@@ -1,0 +1,12 @@
+.vs/
+.vscode/*
+bin/
+obj/
+
+!.vscode/settings.json
+.DS_Store
+.DS_Store
+.env
+*.filters
+*.user
+desktop.ini

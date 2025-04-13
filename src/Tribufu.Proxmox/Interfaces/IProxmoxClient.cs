@@ -1,0 +1,38 @@
+// Copyright (c) Tribufu. All Rights Reserved.
+// SPDX-License-Identifier: MIT
+
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Tribufu.Proxmox.Models;
+
+namespace Tribufu.Proxmox.Interfaces
+{
+    public interface IProxmoxClient
+    {
+        Task<bool> LoginAsync(string username, string password);
+
+        Task<List<ProxmoxNode>> ListNodesAsync();
+
+        Task<ProxmoxNodeStatus> GetNodeStatusAsync(string node);
+
+        Task<List<ProxmoxVirtualMachine>> ListVirtualMachinesAsync(string node);
+
+        Task<ProxmoxVirtualMachineStatus> GetVirtualMachineStatusAsync(string node, int vmid);
+
+        Task<bool> StartVirtualMachineAsync(string node, int vmid);
+
+        Task<bool> RebootVirtualMachineAsync(string node, int vmid);
+
+        Task<bool> ResetVirtualMachineAsync(string node, int vmid);
+
+        Task<bool> SuspendVirtualMachineAsync(string node, int vmid);
+
+        Task<bool> ResumeVirtualMachineAsync(string node, int vmid);
+
+        Task<bool> ShutdownVirtualMachineAsync(string node, int vmid);
+
+        Task<bool> StopVirtualMachineAsync(string node, int vmid);
+
+        Task<List<ProxmoxContainer>> ListContainersAsync(string node);
+    }
+}
