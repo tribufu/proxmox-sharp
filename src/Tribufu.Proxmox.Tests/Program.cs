@@ -1,5 +1,5 @@
 ﻿// Copyright (c) Tribufu. All Rights Reserved.
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 
 using dotenv.net;
 
