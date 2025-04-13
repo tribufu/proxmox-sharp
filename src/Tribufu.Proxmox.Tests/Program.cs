@@ -7,7 +7,7 @@ namespace Tribufu.Proxmox.Tests
 {
     public static class Program
     {
-        public static async Task Main(string[] args)
+        public static async Task Main()
         {
             DotEnv.Load(new DotEnvOptions(ignoreExceptions: true, envFilePaths: [".env", "../../.env"]));
 
