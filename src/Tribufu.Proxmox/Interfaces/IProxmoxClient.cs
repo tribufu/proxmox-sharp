@@ -19,6 +19,8 @@ namespace Tribufu.Proxmox.Interfaces
 
         Task<ProxmoxVirtualMachineStatus> GetVirtualMachineStatusAsync(string node, int vmid);
 
+        Task<bool> CreateVirtualMachineAsync(string node, int vmid, string name, int memoryMb, int cores, string storage, string iso, string netConfig = "virtio,bridge=vmbr0");
+
         Task<bool> StartVirtualMachineAsync(string node, int vmid);
 
         Task<bool> RebootVirtualMachineAsync(string node, int vmid);

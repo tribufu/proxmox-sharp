@@ -83,6 +83,22 @@ namespace Tribufu.Proxmox
             return json["data"].ToObject<ProxmoxNodeStatus>();
         }
 
+        public async Task<bool> CreateVirtualMachineAsync(string node, int vmid, string name, int memoryMb, int cores, string storage, string iso, string netConfig = "virtio,bridge=vmbr0")
+        {
+            var request = new RestRequest($"nodes/{node}/qemu", Method.Post);
+            request.AddParameter("vmid", vmid);
+            request.AddParameter("name", name);
+            request.AddParameter("memory", memoryMb);
+            request.AddParameter("cores", cores);
+            request.AddParameter("ide2", iso + ",media=cdrom");
+            request.AddParameter("scsihw", "virtio-scsi-pci");
+            request.AddParameter("scsi0", $"{storage}:32");
+            request.AddParameter("net0", netConfig);
+
+            var response = await _client.ExecuteAsync(request);
+            return response.IsSuccessful;
+        }
+
         public async Task<List<ProxmoxVirtualMachine>> ListVirtualMachinesAsync(string node)
         {
             var request = new RestRequest($"nodes/{node}/qemu", Method.Get);

@@ -17,7 +17,7 @@ namespace Tribufu.Proxmox.Tests
 
             var proxmox = new ProxmoxClient(clusterUrl, tokenId, tokenSecret);
 
-            var nodes = await proxmox.ListNodesAsync();
+            var nodes = await proxmox.ListVirtualMachinesAsync("broadwell");
             foreach (var node in nodes)
             {
                 Console.WriteLine($"- {node.Name}");
