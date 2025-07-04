@@ -3,7 +3,7 @@
 
 using Newtonsoft.Json;
 
-namespace Tribufu.Proxmox.Models
+namespace ProxmoxSharp.Models
 {
     public class ProxmoxHighAvailability
     {

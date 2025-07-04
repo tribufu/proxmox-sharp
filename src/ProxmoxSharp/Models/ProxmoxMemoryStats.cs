@@ -3,15 +3,12 @@
 
 using Newtonsoft.Json;
 
-namespace Tribufu.Proxmox.Models
+namespace ProxmoxSharp.Models
 {
-    public class ProxmoxStorageStats
+    public class ProxmoxMemoryStats
     {
         [JsonProperty("total")]
         public long Total { get; set; }
-
-        [JsonProperty("avail")]
-        public long Available { get; set; }
 
         [JsonProperty("used")]
         public long Used { get; set; }

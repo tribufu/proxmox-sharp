@@ -4,7 +4,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace Tribufu.Proxmox.Models
+namespace ProxmoxSharp.Models
 {
     public class ProxmoxVirtualMachineStatus
     {

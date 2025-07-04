@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageId>Tribufu.Proxmox</PackageId>
+        <PackageId>ProxmoxSharp</PackageId>
         <Description>Proxmox API Client</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>

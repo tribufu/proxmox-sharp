@@ -9,6 +9,6 @@
         <PackageReference Include="dotenv.net" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Tribufu.Proxmox\Tribufu.Proxmox.csproj" />
+        <ProjectReference Include="..\ProxmoxSharp\ProxmoxSharp.csproj" />
     </ItemGroup>
 </Project>

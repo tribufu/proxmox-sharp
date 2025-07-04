@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Proxmox", "src\Tribufu.Proxmox\Tribufu.Proxmox.csproj", "{A2756937-8D07-4164-9CB7-2C94E9FE0A08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxmoxSharp", "src\ProxmoxSharp\ProxmoxSharp.csproj", "{A2756937-8D07-4164-9CB7-2C94E9FE0A08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Proxmox.Tests", "src\Tribufu.Proxmox.Tests\Tribufu.Proxmox.Tests.csproj", "{0A59E867-1A89-4E07-ABE7-E7DC2FEE9317}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxmoxSharp.Tests", "src\ProxmoxSharp.Tests\ProxmoxSharp.Tests.csproj", "{0A59E867-1A89-4E07-ABE7-E7DC2FEE9317}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

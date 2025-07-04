@@ -1,11 +1,11 @@
 // Copyright (c) Tribufu. All Rights Reserved.
 // SPDX-License-Identifier: MIT
 
+using ProxmoxSharp.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tribufu.Proxmox.Models;
 
-namespace Tribufu.Proxmox.Interfaces
+namespace ProxmoxSharp.Interfaces
 {
     public interface IProxmoxClient
     {

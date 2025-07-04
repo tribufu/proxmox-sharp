@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: MIT
 
 using Newtonsoft.Json.Linq;
+using ProxmoxSharp.Interfaces;
+using ProxmoxSharp.Models;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tribufu.Proxmox.Interfaces;
-using Tribufu.Proxmox.Models;
 
-namespace Tribufu.Proxmox
+namespace ProxmoxSharp
 {
     public class ProxmoxClient : IProxmoxClient
     {

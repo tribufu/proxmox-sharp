@@ -3,7 +3,7 @@
 
 using dotenv.net;
 
-namespace Tribufu.Proxmox.Tests
+namespace ProxmoxSharp.Tests
 {
     public static class Program
     {
