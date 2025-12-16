@@ -11,16 +11,19 @@ namespace ProxmoxSharp.Tests
         {
             DotEnv.Load(new DotEnvOptions(ignoreExceptions: true, envFilePaths: [".env", "../../.env"]));
 
-            var clusterUrl = Environment.GetEnvironmentVariable("PROXMOX_CLUSTER_URL");
-            var tokenId = Environment.GetEnvironmentVariable("PROXMOX_TOKEN_ID");
-            var tokenSecret = Environment.GetEnvironmentVariable("PROXMOX_TOKEN_SECRET");
-
-            var proxmox = new ProxmoxClient(clusterUrl, tokenId, tokenSecret);
-
-            var nodes = await proxmox.ListVirtualMachinesAsync("broadwell");
+            var proxmox = ProxmoxApi.FromEnv()!;
+            var nodes = (await proxmox.GetNodesAsync()).Data;
+            Console.WriteLine($"nodes:");
             foreach (var node in nodes)
             {
-                Console.WriteLine($"- {node.Name}");
+                Console.WriteLine($"- {node.Node}");
+            }
+
+            var vms = (await proxmox.GetVMsAsync(nodes[0].Node)).Data;
+            Console.WriteLine($"vms:");
+            foreach (var vm in vms)
+            {
+                Console.WriteLine($"- {vm.Name}");
             }
         }
     }

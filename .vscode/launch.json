@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: Debug",
+            "preLaunchTask": "build",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": ["${workspaceFolder}/src/ProxmoxSharp.Tests/bin/Debug/net8.0/ProxmoxSharp.Tests.dll"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole"
+        }
+    ]
+}

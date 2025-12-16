@@ -3,7 +3,8 @@
 bin/
 obj/
 
-!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
 .DS_Store
 .DS_Store
 .env
