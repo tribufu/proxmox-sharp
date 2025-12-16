@@ -1,0 +1,13 @@
+// Copyright (c) Tribufu. All Rights Reserved.
+// SPDX-License-Identifier: MIT
+
+@url = {{$dotenv PROXMOX_URL}}
+@token_id = {{$dotenv PROXMOX_TOKEN_ID}}
+@token_secret = {{$dotenv PROXMOX_TOKEN_SECRET}}
+
+###
+
+GET {{url}}/api2/json/nodes
+Authorization: PVEAPIToken={{token_id}}={{token_secret}}
+
+###
