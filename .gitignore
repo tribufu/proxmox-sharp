@@ -2,8 +2,10 @@
 .vscode/*
 bin/
 obj/
+releases/*
 
 !.vscode/settings.json
+!releases/.gitkeep
 .DS_Store
 .DS_Store
 .env
