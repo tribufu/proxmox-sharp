@@ -7,7 +7,7 @@ java -jar ./vendor/openapi-generator/openapi-generator-cli.jar generate `
     -g csharp `
     -o . `
     --global-property apis,models,supportingFiles,apiDocs=false,modelDocs=false,apiTests=false,modelTests=false `
-    --additional-properties=packageName=ProxmoxSharp,library=restsharp,zeroBasedEnums=true,nullableReferenceTypes=true `
+    --additional-properties=targetFramework=net47,packageName=ProxmoxSharp,library=restsharp,zeroBasedEnums=true `
     --openapi-normalizer SET_TAGS_FOR_ALL_OPERATIONS=ProxmoxGenerated `
     --type-mappings Any=object `
     --skip-validate-spec

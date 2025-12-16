@@ -35,7 +35,7 @@ namespace ProxmoxSharp
         /// // Environment variable PROXMOX_API_KEY must be set
         /// var api = ProxmoxApi.FromEnv();
         /// </example>
-        public static ProxmoxApi? FromEnv()
+        public static ProxmoxApi FromEnv()
         {
             var baseUrl = Environment.GetEnvironmentVariable("PROXMOX_URL");
             var tokenId = Environment.GetEnvironmentVariable("PROXMOX_TOKEN_ID");
@@ -65,8 +65,8 @@ namespace ProxmoxSharp
         {
             var version = GetVersion();
             var frameworkDescription = RuntimeInformation.FrameworkDescription.Trim();
-            var runtimeIdentifier = RuntimeInformation.RuntimeIdentifier.Trim();
-            return $"Proxmox/{version} ({frameworkDescription}; {runtimeIdentifier})";
+            //var runtimeIdentifier = RuntimeInformation.RuntimeIdentifier.Trim();
+            return $"ProxmoxSharp/{version} ({frameworkDescription})";
         }
 
         /// <summary>

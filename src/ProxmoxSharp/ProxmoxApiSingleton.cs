@@ -11,14 +11,18 @@ namespace ProxmoxSharp
     /// </remarks>
     public static class ProxmoxApiSingleton
     {
-        private static ProxmoxApi? _instance = null;
+        private static ProxmoxApi _instance = null;
 
         /// <summary>
         /// Get the singleton instance of <see cref="ProxmoxApi"/>.
         /// </summary>
         public static ProxmoxApi GetInstance()
         {
-            //_instance ??= ProxmoxApi.FromEnvOrDefault();
+            if (_instance == null)
+            {
+                _instance = ProxmoxApi.FromEnv();
+            }
+
             return _instance;
         }
 
