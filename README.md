@@ -2,9 +2,12 @@
 
 Proxmox C# API Client.
 
+[![nuget][nuget-badge]][nuget-url]
 [![MIT License][mit-badge]][mit-url]
 [![Discord Chat][discord-badge]][discord-url]
 
+[nuget-badge]: https://img.shields.io/nuget/v/ProxmoxSharp.svg
+[nuget-url]: https://www.nuget.org/packages/ProxmoxSharp
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/tribufu/proxmox-sharp/blob/main/LICENSE.txt
 [discord-badge]: https://img.shields.io/discord/276504514616623104.svg?logo=discord&style=flat-square
