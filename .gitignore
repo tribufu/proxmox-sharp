@@ -2,9 +2,11 @@
 .vscode/*
 bin/
 obj/
+releases/*
 
 !.vscode/launch.json
 !.vscode/tasks.json
+!releases/.gitkeep
 .DS_Store
 .DS_Store
 .env
